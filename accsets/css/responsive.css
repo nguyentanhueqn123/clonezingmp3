@@ -1,0 +1,44 @@
+/* Mobile & Tablet  */
+@media (max-width: 1023px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+
+}
+/* Tablet  */
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+    .pl-tablet{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    /* .container-header{
+        margin-left: -267px;
+        padding-right: 60px;
+    }
+    .container-header .searcher {
+        width: 360px;
+    }
+    .container-header .header-right {
+        margin-right: -30px;
+    }
+    .zingchart .zingchart-tab .zc-img{
+        width: 220px;
+        height: 60px;
+    }
+    .zingchart .zing-chart__img button {
+        left: 42%;
+    } */
+    
+  
+}
+
+/* Moblie  */
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+
+}

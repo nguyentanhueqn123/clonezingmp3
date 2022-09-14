@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZingMp3</title>
+
+    <link rel="stylesheet" href="./accsets/css/grid.css">
+    <link rel="stylesheet" href="./accsets/css/style.css">
+    <link rel="stylesheet" href="./accsets/css/responsive.css">
+
+
+    
+    <!-- icon logo  -->
+    <link rel="shortcut icon" type="image/png" href="./accsets/img/iconlogo.png"/>
+    <!-- CSS icon  -->
+    <link rel="stylesheet" href="./font/fontawesome-free-6.0.0-web/css/all.css">
+    <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
+    <!-- CSS slide img -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    
+</head>
+<body>
+    <div class="grid">
+        <nav class="hide-on-tablet">
+            <div class="menu">
+               <ul>
+                    <li><a href="" ><img class="img-logo"  src="./accsets/img/logo-dark.svg" alt=""></a></li>
+                    <li><a href="#">
+                        <ion-icon class="icontab" name="musical-note-outline"></ion-icon>
+                        Cá Nhân</a>
+                    </li>
+    
+                    <li class="active"><a href="#" title="Khám Phá">
+                        <ion-icon class="icontab" name="disc-outline"></ion-icon>
+                        Khám Phá</a>
+                    </li>
+                    <li>
+                        <a href="#" title="zingchart">
+                        <ion-icon class="icontab" name="pie-chart-outline"></ion-icon>
+                        #zingchart</a>
+                    </li>
+                    <li><a href="#" title="Radio">
+                        <ion-icon class="icontab" name="radio-outline"></ion-icon>
+                        Radio
+                        <p class="live">Live</p>
+                    </a>
+                    </li>
+                    <li><a href="#" title="Theo Dõi">
+                        <ion-icon class="icontab" name="reader-outline"></ion-icon>
+                        Theo Dõi</a>
+                    </li>
+                    <li>
+                        <div class="bar-row"></div>
+                    </li>
+                    <li><a href="#" title="Nhạc Mới">
+                        <ion-icon class="icontab" name="musical-notes-outline"></ion-icon>
+                        Nhạc Mới</a>
+                    </li>
+                    <li><a href="#" title="Thể Loại">
+                        <ion-icon class="icontab" name="grid-outline"></ion-icon>
+                        Thể Loại</a>
+                    </li>
+                    <li><a href="#" title="Top 100">
+                        <ion-icon class="icontab" name="star-outline"></ion-icon>
+                        Top 100</a>
+                    </li>
+                    <li><a href="#" title="MV">
+                        <ion-icon class="icontab" name="tv-outline"></ion-icon>
+                        MV</a>
+                    </li>
+                    <li>
+                        <div class="container">
+                            <p class="discrip">
+                                Nghe nhạc không quảng cáo
+                                cùng kho nhạc VIP
+                            </p>
+                            <button class="btn" id="myBtn">NÂNG CẤP VIP</button>
+                            
+                            <!-- Modal content -->
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="ctn-modal">
+                                        <img class="logo-modal" src="./accsets/img/iconlogo.png" alt="">
+                                    </div>
+    
+                                    <div class="ctn-modal">
+                                        <h1>Âm nhạc không giới hạn</h1>
+                                    </div>
+    
+                                    <div class="ctn-modal">
+                                        <img class="vip-month" src="./accsets/img/6month.jpg" alt="">
+                                        <img class="vip-month" src="./accsets/img/1year.jpg" alt="">
+                                        <img class="vip-month" src="./accsets/img/2years.jpg" alt="">
+    
+                                    </div>
+                                    <div class="ctn-modal">
+                                        <img class="vipcode" src="./accsets/img/vipcode.jpg" alt="">
+                                    </div>
+    
+                                </div>
+                              
+                            </div>
+                            
+                            <!-- js của modal  -->
+                            <script>
+                                // Get the modal
+                                var modal = document.getElementById("myModal");
+                                
+                                // Get the button that opens the modal
+                                var btn = document.getElementById("myBtn");
+                                
+                                // Get the <span> element that closes the modal
+                                var span = document.getElementsByClassName("close")[0];
+                                
+                                // When the user clicks the button, open the modal 
+                                btn.onclick = function() {
+                                  modal.style.display = "block";
+                                }
+                                
+                                // When the user clicks on <span> (x), close the modal
+                                span.onclick = function() {
+                                  modal.style.display = "none";
+                                }
+                                
+                                // When the user clicks anywhere outside of the modal, close it
+                                window.onclick = function(event) {
+                                  if (event.target == modal) {
+                                    modal.style.display = "none";
+                                  }
+                                }
+                            </script>
+    
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="cre-playlist">
+                            <ion-icon class="icontab" name="add-outline"></ion-icon>
+                            <p class="txt">Tạo playlist mới</p>
+                        </a>
+                    </li>
+    
+               </ul>
+    
+            </div>
+    
+        </nav>
+    
+        <header>
+            <div class="container-header">
+                <div class="icon__left-right">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+    
+                <div class="search">
+                    <ion-icon name="search-outline" class="ser"></ion-icon>
+                    <input type="text" class="searcher" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát...">
+    
+                </div>
+    
+                <div class="header-right" >
+                    <div class="icon-right icon1">
+                        <ion-icon name="layers-outline" class="icon layers"></ion-icon>
+                            
+                    </div>
+                    <div class="icon-right icon2">
+                        <!-- <a href="#"> -->
+                            <ion-icon name="share-outline" class="icon share"></ion-icon>
+                        <!-- </a> -->
+                            
+                    </div>
+                    <div id="myicon3" class="icon-right icon3">
+                        <ion-icon name="settings-outline" class="icon settings"></ion-icon>
+                        <div id="mysubnav" class="subnav" >
+                                <div class="subnav-container">
+                                    <div class="icon-subnav">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="ban-outline"></ion-icon>
+                                            Danh sách chặn
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="icon-subnav quality-music">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="albums-outline"></ion-icon>
+                                            Chất lượng nhạc
+                                            <ion-icon class="right-icon" name="chevron-forward-outline"></ion-icon>
+                                        </a>
+    
+                                        <!-- subnav-child 1  -->
+                                        <div class="subnav-child">
+                                            <div class="subnav-child__container">
+                                                <div class="subnav-child__quality">
+                                                    <div class="text-quality__container">
+                                                        <p class="text-quality">SQ . 128</p>
+                                                        <p class="text">
+                                                            Giảm dữ liệu xử dụng cho các kết nối
+                                                            <br>chậm hơn.
+                                                        </p>
+            
+                                                    </div>
+                                                    <ion-icon class="ticker" name="checkmark-outline"></ion-icon>
+                                                    
+                                                </div>
+                                                <div class="subnav-child__quality">
+                                                    <div class="text-quality__container">
+                                                        <p class="text-quality">HQ . 330</p> 
+                                                        <p class="text">
+                                                        Kết hợp tốt giữa việc sử dụng<br> 
+                                                        dữ liệu và chất lượng âm thanh.
+                                                        </p>
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+    
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="icon-subnav ui-music">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="play-circle-outline"></ion-icon>
+                                            Giao diện
+                                            <ion-icon class="right-icon" name="chevron-forward-outline"></ion-icon>
+                                        </a>
+                                        <!-- subnav-child 2  -->
+                                        <div class="subnav-child2">
+                                            <div class="subnav-child__container">
+                                                <div class="subnav-child__quality">
+                                                    <div class="text-quality__container">
+                                                        <p class="text-ui">Luôn phát nhạc toàn màn hình</p>
+    
+                                                    </div>
+                                                    <input class="turn" type="range" step="1" value="0" min="0" max="1" required>
+    
+                                                    
+                                                </div>
+                                                <div class="subnav-child__quality">
+                                                    <div class="text-quality__container">
+                                                        <p class="text-ui">Hiệu ứng</p>
+                                                    </div>
+                                                    <input class="turn" type="range"  step="1" value="0" min="0" max="1" required>
+    
+                                                    
+                                                </div>
+    
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    
+                                        <!-- js click subnav  -->
+                                        <script>
+                                            var subnav = document.getElementById("mysubnav");
+                                            var icon3 = document.getElementById("myicon3");
+                                            
+                                            icon3.onclick = function() {
+                                            subnav.style.display = "block";
+                                            }
+                                            
+                                            window.onclick = function() {
+                                            subnav.style.display = "none";
+                                            }
+                                            window.onclick = function(event) {
+                                            if (event.target == subnav) {
+                                                subnav.style.display = "none";
+                                            }
+                                            }
+                                        </script>
+                                        
+                                    </div>
+                                    <div class="icon-subnav">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="checkbox-outline"></ion-icon>
+                                            Mua code VIP
+                                        </a>
+    
+                                    </div>
+                                    <div>
+                                        <div class="line-row"></div>
+                                    </div>
+                                    <div class="icon-subnav">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="alert-circle-outline"></ion-icon>
+                                            Giới thiệu
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="icon-subnav">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="flag-outline"></ion-icon>
+                                            Góp ý
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="icon-subnav">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="call-outline"></ion-icon>
+                                            Liên hệ</a>
+                                    </div>
+                                    
+                                    <div class="icon-subnav">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="document-text-outline"></ion-icon>
+                                            Thỏa thuận sử dụng
+                                        </a>
+                                    </div>
+                                    <div class="icon-subnav">
+                                        <a href="">
+                                            <ion-icon class="icon-subnav__right" name="shield-checkmark-outline"></ion-icon>
+                                            Chính sách bảo mật
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                               
+                        </div>
+    
+                    </div>
+    
+                    <div class="icon-right icon4">
+                            <ion-icon name="person-outline" class="icon person"></ion-icon>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </header>
+    
+        <content>   
+            <div class="content-container__box">
+                <!-- stt 1  -->
+                <div class="container__slide-banner">
+                    <div class="container-slide">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <img src="./accsets/img/img11.jpg" alt="">
+                              </div>
+        
+                              <div class="swiper-slide">
+                                <img src="./accsets/img/img33.jpg" alt="">                            
+                              </div>
+        
+                              <div class="swiper-slide">
+                                <img src="./accsets/img/img44.jpg" alt="">
+                              </div>
+        
+                              <div class="swiper-slide">
+                                <img src="./accsets/img/img55.jpg" alt="">
+                              </div>
+        
+                              <div class="swiper-slide">
+                                <img src="./accsets/img/img77.jpg" alt="">
+                              </div>
+        
+                              <div class="swiper-slide">
+                                <img src="./accsets/img/img66.jpg" alt="">                            
+                              </div>
+                              
+                            </div>
+                            
+                            <div class="swiper-button-next">
+                                <ion-icon class="swiper-btn__next" name="chevron-forward-outline"></ion-icon>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <ion-icon class="swiper-btn__prev" name="chevron-back-outline"></ion-icon>
+                            </div>
+                            <!-- <div class="swiper-pagination"></div> -->
+                        </div>
+        
+                    </div>
+                    
+                    <div class="banner-content">
+                        <a href=""><img src="./accsets/img/banner.jpg" alt=""></a>
+                    </div>
+                    
+                </div>
+                <!-- stt 2  -->
+                <div class="main-content">
+                    <div class="main-container">
+                        <h2>Lựa chọn hôm nay</h2>
+                        <ul>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic1.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                </div>
+                                <a href="" class="title">Nam Thần Nhạc Việt</a>
+                                <p class="title-sub">Đổ đứ đừ với những nam thần<br>
+                                    quốc dân của làng nhạc Việt
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic2.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                            
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                </div>
+                                <a href="" class="title">Rap Việt Cực Chất</a>
+                                <p href="" class="title-sub">Rap Việt cực cháy, chuẩn bị sẵn<br>
+                                    bình cứu hỏa kẻo bỏng tai
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic3.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                </div>
+                                <a href="" class="title">K-Pop Daebak</a>
+                                <p class="title-sub">Căng đét cùng K-Pop đến từ<br>
+                                    TaeYeon, aespa và IVE
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic4.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                </div>
+                                <a href="" class="title">Nhạc Phim Âu Mỹ Mới Nhất</a>
+                                <p class="title-sub">Ở đây có nhạc phim 'Marry Me'<br>
+                                    và các bộ phim bom tấn khác
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic5.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                </div>
+                                <a href="" class="title">Pop Chill</a><br>
+                                <p class="title-sub">Nhạc chill cho tín đồ của Pop</p>
+                            </li>
+                            
+                        </ul>
+            
+                    </div>
+                </div>
+                <!-- stt 3  -->
+                <div class="main-content">
+                    <div class="main-container">
+                        <h2>XONE's CORNER</h2>
+                        <ul>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic1.1.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+    
+                                </div>
+                                <a href="" class="title">Throwback HAPPY HITS</a><br>
+                                <p class="title-sub">Replay ca khúc khiến bạn hạnh
+                                    <br>phúc
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic1.2.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">HOT 100 độ XONE</a><br>
+                                <p class="title-sub">V-POP hot nhất tuần qua
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic1.3.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">ASIA TUNE - POP</a><br>
+                                <p class="title-sub">TOP nghệ sỹ dẫn đầu làn sóng
+                                    <br>CHÂU Á: IVE, Red Velvet, Đức...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic1.4.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">XONE's PICKS</a><br>
+                                <p class="title-sub">F5 là có nhạc mới mỗi ngày
+                                </p><br>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic1.5.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">HOLIDAY VIBES</a><br>
+                                <p class="title-sub">Bữa tiệc US-UK với R3HAB, Rita
+                                    <br>Ora...
+    
+                                </p>
+                            </li>
+                            
+                        </ul>
+            
+                    </div>
+                </div>
+                <!-- stt 4  -->
+                <div class="main-content">
+                    <div class="main-container">
+                        <h2>Nhạc Mới Mỗi Ngày</h2>
+                        <ul>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic2.1.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">V-Pop Tháng 8/2022</a><br>
+                                <p class="title-sub">Đức Phúc, AMEE, ERIK *...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic2.2.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">US-UK Tháng 8/2022</a><br>
+                                <p class="title-sub">Conan Gray, Tate McRae, Troye
+                                    <br>Sivan...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic2.3.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">K-Pop Tháng 8/2022</a><br>
+                                <p class="title-sub">TTAEYEON, TREASURE, Apink...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic2.4.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">C-Pop Tháng 8/2022</a><br>
+                                <p class="title-sub">Tô Tinh Tiệp, Tiểu Lam
+                                    Bối Tâm, <br>Tiểu Điền Âm Nhạc Xã...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic2.5.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">Indie Việt Tháng 8/2022</a><br>
+                                <p class="title-sub">Đức Trường, Wren Evans, Xuân
+                                    <br>Nghi...
+                                </p>
+                            </li>
+                            
+                        </ul>
+            
+                    </div>
+                </div>
+                <!-- stt 5  -->
+                <div class="zingchart">
+                    <div class="zing-chart__img">
+                        <img src="./accsets/img/zingchart.jpg" alt="">
+                        <h2>#zingchart</h2>
+                        <button class="btn-seemore">Xem thêm</button>
+                        
+                    </div>
+                   
+                    <div class="zingchart-tab">
+                        <div class="zc-img">
+                            <a href=""><img src="./accsets/img/zingchart1.jpg" alt=""></a>
+                        </div>
+                        <div class="zc-img">
+                            <a href=""><img src="./accsets/img/zingchart2.jpg" alt=""></a>
+                        </div>
+                        <div class="zc-img">
+                            <a href=""><img src="./accsets/img/zingchart3.jpg" alt=""></a>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!-- stt 6  -->
+                <div class="zingchoice">
+                    <div class="zc-container swiper mySwiper1">
+                        <div class="zc-slide swiper-wrapper">
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc1.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc2.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc3.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc4.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc5.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc6.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc7.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc8.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc9.png" alt=""></a>
+                            <a href="" class="mySlides swiper-slide"><img src="./accsets/img/zc10.png" alt=""></a>
+                            
+                            
+                        </div>
+                        <div class="swiper-button-next">
+                            <ion-icon class="icon-slider-zc right" name="chevron-forward-circle-outline" onclick="plusDivs1(1)"></ion-icon>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <ion-icon class="icon-slider-zc left" name="chevron-back-circle-outline" onclick="plusDivs1(-1)"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    
+                </div> 
+                <!-- stt 7  -->
+                <div class="main-content">
+                    <div class="main-container">
+                        <h2>Top 100</h2>
+                        <ul>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic3.1.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">Top 100 Nhạc V-Pop Hay Nhất</a><br>
+                                <p class="title-sub">Lê Bảo Bình, Đinh Tùng Huy,
+                                    <br>Phát Hồ...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic3.2.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">Top 100 Nhạc Rap Việt Nam...</a><br>
+                                <p href="" class="title-sub">Lil Wuyn, Binz, Rhymastic...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic3.3.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">Top 100 Nhạc EDM Việt Hay...</a><br>
+                                <p class="title-sub">Masew, Pháo, CM1X...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic3.4.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">Top 100 Bài Hát Nhạc Trẻ Hay.</a><br>
+                                <p class="title-sub">ERIK, Châu Khải Phong, Lê
+                                    <br>Bảo Bình...
+                                </p>
+                            </li>
+                            <li>
+                                <div class="img-hover">
+                                    <figure class="figure-img">
+                                        <img src="./accsets/img/pic3.5.jpg" alt="">
+                                        <figcaption>
+                                            <div class="fig-container">
+                                                <div class="figure-cover__icon">
+                                                    <ion-icon name="heart-outline" class="icon-temp"></ion-icon>
+                                                    <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                                                    <ion-icon name="ellipsis-horizontal-outline" class="icon-temp"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                        <a href="#"></a>
+                                    </figure>
+                                    
+                                </div>
+                                <a href="" class="title">Top 100 Pop Âu Mỹ Hay Nhất</a><br>
+                                <p class="title-sub">Adele, The Kid LAROI, Justin
+                                    <br>Bieber...
+    
+                                </p>
+                            </li>
+                            
+                        </ul>
+            
+                    </div>
+                </div> 
+                <!-- stt 8 -->
+                <div class="fav-content">
+                    <h2>Nghệ Sĩ Yêu Thích</h2>
+                    <div class="fav-container">
+                        <div class="fav-img">
+                            <img src="./accsets/img/fav1.jpg" alt="">
+                            <div class="fav-icon">
+                                <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="fav-img">
+                            <img src="./accsets/img/fav2.jpg" alt="">
+                            <div class="fav-icon">
+                                <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="fav-img">
+                            <img src="./accsets/img/fav3.jpg" alt="">
+                            <div class="fav-icon">
+                                <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                </div> 
+                <!-- stt 9  -->
+                <div class="main-footer">
+                    <h4>Đối Tác Âm Nhạc</h4>
+                    <img class="partner-img" src="./accsets/img/doitac1.png" alt="">
+                </div>
+    
+            </div>
+               
+        </content>
+    
+        <!-- player dashboard  -->
+        <div class="player-dashboard">
+            <div class="player">
+                <!-- Dashboard -->
+                <div class="dashboard">
+    
+                  <!-- Header -->
+                    <header1>
+                        <!-- <h4>Đang Phát :</h4> -->
+                        
+                        <!-- Reaction -->
+                        <div class="icon-cover">
+                            <div class="contain-name">
+                                <h2 class="name-song">hue nguyen</h2>
+                                <h3 class="name-singer">pichu</h3>
+                            </div>
+                            <i class="fa-regular fa-heart icon-heart"></i>
+                            <i class="fa-solid fa-ellipsis icon-ellipses"></i>
+                            
+                        </div>
+                    </header1>
+              
+                  <!-- CD -->
+                    <div class="cd">
+                        <div class="cd-thumb">
+                        </div>
+                        
+                    </div>
+                    
+                  
+                  <!-- Control -->
+                    <div class="control">
+                    <div class="btn btn-repeat">
+                        <i class="fas fa-redo"></i>
+                    </div>
+        
+                    <div class="btn btn-prev">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+        
+                    <div class="btn btn-toggle-play">
+                        <i class="fas fa-pause icon-pause"></i>
+                        <i class="fas fa-play icon-play"></i>
+                    </div>
+        
+                    <div class="btn btn-next">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+        
+                    <div class="btn btn-random">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    </div>
+    
+                    <div class="control-sub">
+                        <i class="fa-solid fa-tv icon"></i>
+                        <i class="fa-solid fa-microphone icon"></i>
+                        <i class="fa-solid fa-volume-high icon"></i>
+                        <div class="volume-panel">
+                            <div class="input-div">
+                                <div class="volume-input-div">
+                                    <input type="range" value="80" step="5">
+                                    <div class="volume-progress"></div>
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <i class="options"></i>
+                        <i class="fa-solid fa-music icon" onclick="openNav()"></i>
+                        <!-- tab slide  -->
+                        <div id="mySidetab" class="sidetab">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            
+                            <!-- Playlist -->
+                            <div class="playlist">
+                            </div>
+                            
+                            
+                        </div>
+                        <!-- js click slidetab music -->
+                        <script>
+                            function openNav() {
+                            document.getElementById("mySidetab").style.width = "330px";
+                            }
+                            
+                            function closeNav() {
+                            document.getElementById("mySidetab").style.width = "0";
+                            }
+                            
+                        </script>
+                  
+                    </div>
+    
+                    <div class="line-mussic">
+                        <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                    </div>
+              
+                    <audio id="audio" src=""></audio>
+                </div>
+              
+                <!-- Playlist -->
+                <!-- <div class="playlist">
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+
+
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!--TEST Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+        var swiper = new Swiper(".mySwiper1", {
+            slidesPerView: 7,
+            spaceBetween: 20,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- Ionicons JS  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="./accsets/js/changebg.js"></script>
+    <script src="./accsets/js/script.js"></script>
+    <script src="./accsets/js/player.js"></script>
+
+</body>
+</html>
